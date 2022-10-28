@@ -32,3 +32,6 @@ nose==1.3.7
 robotframework==3.2.2
 robotremoteserver==1.1
 robotframework-screencaplibrary==1.5.0
+
+# Debug library to allow remote debugging
+debugpy
