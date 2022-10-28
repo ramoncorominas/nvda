@@ -9,7 +9,8 @@ It can handle some command-line arguments (including help).
 It sets up logging, and then starts the core.
 """
 
-import debugpy
+import debugger
+debugger.start()
 
 import logging
 import sys
