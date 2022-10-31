@@ -1,3 +1,14 @@
+# -*- coding: UTF-8 -*-
+# Remote debugging module for Python applications
+# Copyright (C) 2022 Ramón Corominas
+# This file is covered by the GNU General Public License.
+
+"""Module for remote debugging of Python applications.
+Use debugger.start() to launch the debug server with default arguments. Debug port: 2633
+"""
+
+
+import os
 import logging
 logging.basicConfig(
 		filename = f"{__name__}.log",
@@ -10,9 +21,9 @@ debug = logging.getLogger(__name__)
 # Default debug port
 DEBUG_PORT = 2633
 
-# base directory of installed (system) python
-PYTHON_BASEDIR = r"C:\Users\Tinitun\AppData\Local\Programs\Python\Python37-32"
-PYTHON_EXE = rf"{PYTHON_BASEDIR}\debug_python.exe"  # global python executable
+# base directory of installed (system) python (v3.7)
+USER_HOME_DIRECTORY = os.path.expanduser("~")
+PYTHON_EXE = rf"{USER_HOME_DIRECTORY}\AppData\Local\Programs\Python\Python37-32\python.exe"  # global environment python executable
 
 # Default log directory for debugger
 DEBUG_LOG_DIRECTORY = r"C:\logsDebugpy"
